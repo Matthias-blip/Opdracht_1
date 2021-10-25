@@ -22,16 +22,26 @@ namespace Opdracht_1
 
         }
 
+        List<string> MyList = new List<string>();
         private void button1_Click(object sender, EventArgs e)
         {
             // de product en prijs invoeren komen in een string
             string Product = ProductInvoer.Text;
             string Prijs = PrijsInvoer.Text;
+            // de prijs string wordt een double
             double getal = double.Parse(Prijs, System.Globalization.CultureInfo.InvariantCulture);
-            List<Tuple<double, string>> Lijst = new List<Tuple<double, string>>();
-            Lijst.Add(new Tuple<double, string>(getal, Product));
+            double totaal = getal + getal;
+            // de double en de string komen in een list
+            listBox1.Items.Add(Product); 
+            listBox1.Items.Add(Prijs);
 
-            listBox1.DataSource = Lijst;
+            string y = totaal.ToString();
+            textBox1.Text = y;
+
+
+
         }
+
+     
     }
 }
