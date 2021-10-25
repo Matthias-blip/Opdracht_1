@@ -21,5 +21,16 @@ namespace Opdracht_1
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string Product = ProductInvoer.Text;
+            string Prijs = PrijsInvoer.Text;
+            List<string> Lijst = new List<string>();
+            Lijst.Add(Product);
+            Lijst.Add(Prijs);
+
+            listBox1.DataSource = Lijst;
+        }
     }
 }
