@@ -24,11 +24,12 @@ namespace Opdracht_1
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // de product en prijs invoeren komen in een string
             string Product = ProductInvoer.Text;
             string Prijs = PrijsInvoer.Text;
-            List<string> Lijst = new List<string>();
-            Lijst.Add(Product);
-            Lijst.Add(Prijs);
+            double getal = double.Parse(Prijs, System.Globalization.CultureInfo.InvariantCulture);
+            List<Tuple<double, string>> Lijst = new List<Tuple<double, string>>();
+            Lijst.Add(new Tuple<double, string>(getal, Product));
 
             listBox1.DataSource = Lijst;
         }
