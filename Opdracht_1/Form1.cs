@@ -65,6 +65,8 @@ namespace Opdracht_1
         { 
             output.Text = totaal.ToString();
          }
+         
+         //made bij Matthias als je deze code kopieert ga je er mee akkoord dat jij plagiaat pleegt
        
        
 
